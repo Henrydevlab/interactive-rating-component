@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive, fully accessible rating component challenge by Frontend Mentor. Built with semantic HTML, BEM architecture, and CSS variables.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="henrydevlab (@henrydevlab)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://henrydevlab.github.io/interactive-rating-component/">
+  <meta property="og:title" content="Frontend Mentor | Interactive Rating Component">
+  <meta property="og:description" content="Submit your feedback with this accessible interactive rating card. Check out the clean frontend design!">
+  <meta property="og:image" content="https://henrydevlab.github.io/interactive-rating-component/design/desktop-design.jpg">
+  <meta property="og:image:alt" content="Preview of the interactive dark theme rating card design layout">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@henrydevlab">
+  <meta name="twitter:creator" content="@henrydevlab">
+  <meta name="twitter:title" content="Frontend Mentor | Interactive Rating Component">
+  <meta name="twitter:description" content="Submit your feedback with this accessible interactive rating card. Check out the clean frontend design!">
+  <meta name="twitter:image" content="https://henrydevlab.github.io/interactive-rating-component/design/desktop-design.jpg">
+
+  <script src="app.js" defer></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    <div class="card">
+      
+      <section class="card__view card__view--rating" id="rating-view">
+        <div class="card__icon-wrapper" aria-hidden="true">
+          <img src="./images/icon-star.svg" alt="" class="card__icon" width="16" height="16">
+        </div>
+        
+        <h1 class="card__title">How did we do?</h1>
+        <p class="card__description">
+          Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+        </p>
+
+        <form class="card__form" id="rating-form">
+          <fieldset class="card__fieldset">
+            <legend class="sr-only">Select a rating from 1 to 5</legend>
+            <div class="card__ratings">
+              <label class="card__rating-label">
+                <input type="radio" name="rating" value="1" class="card__rating-input" aria-label="Rating 1 out of 5" required>
+                <span class="card__rating-button">1</span>
+              </label>
+              <label class="card__rating-label">
+                <input type="radio" name="rating" value="2" class="card__rating-input" aria-label="Rating 2 out of 5">
+                <span class="card__rating-button">2</span>
+              </label>
+              <label class="card__rating-label">
+                <input type="radio" name="rating" value="3" class="card__rating-input" aria-label="Rating 3 out of 5">
+                <span class="card__rating-button">3</span>
+              </label>
+              <label class="card__rating-label">
+                <input type="radio" name="rating" value="4" class="card__rating-input" aria-label="Rating 4 out of 5">
+                <span class="card__rating-button">4</span>
+              </label>
+              <label class="card__rating-label">
+                <input type="radio" name="rating" value="5" class="card__rating-input" aria-label="Rating 5 out of 5">
+                <span class="card__rating-button">5</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="card__submit-btn" aria-label="Submit your rating">Submit</button>
+        </form>
+      </section>
+
+      <section class="card__view card__view--thank-you card__view--hidden" id="thank-you-view" aria-live="polite">
+        <div class="card__illustration">
+          <img src="./images/illustration-thank-you.svg" alt="Illustration representing mobile payment receipt transmission" class="card__img" width="144" height="108">
+        </div>
+
+        <div class="card__badge">
+          <p class="card__badge-text">You selected <span id="selected-rating-value">0</span> out of 5</p>
+        </div>
+
+        <h2 class="card__title card__title--center">Thank you!</h2>
+        <p class="card__description card__description--center">
+          We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/henrydevlab">Henry</a>.
+  </footer>
+  
+</body>
+</html>
